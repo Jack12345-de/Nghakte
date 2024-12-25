@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 1rem;
+        }
+        nav {
+            margin: 1rem 0;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #ff6f61;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 2rem;
+        }
+        footer {
+            background-color: #ff6f61;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Fun Website!</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#fun-facts">Fun Facts</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
+
+    <section id="home">
+        <h2>Just for Fun!</h2>
+        <p>Welcome! This site is all about having fun and sharing some laughs. Explore the pages and enjoy!</p>
+    </section>
+
+    <section id="fun-facts">
+        <h2>Random Fun Fact</h2>
+        <p id="fact">Click the button to see a fun fact!</p>
+        <button onclick="showFact()">Show Fun Fact</button>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p>Upload your favorite pictures here!</p>
+        <!-- Add image tags or upload functionality later -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fun Website. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const facts = [
+            "Honey never spoils! Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3000 years old.",
+            "Bananas are berries, but strawberries aren't!",
+            "A group of flamingos is called a 'flamboyance'.",
+            "Octopuses have three hearts!"
+        ];
+
+        function showFact() {
+            const factElement = document.getElementById('fact');
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            factElement.textContent = randomFact;
+        }
+    </script>
+</body>
+</html>
